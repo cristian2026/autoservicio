@@ -1,0 +1,24 @@
+<mvc:View controllerName="AutoservicioPHR.App.CertQuinta.App" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc">
+  <App>
+    <Page showNavButton="true" navButtonText="Back" navButtonPress="onNavBack"  title="Certificado Quinta">
+      <core:HTML id="pdfContainer"/>
+      <FlexBox class="sapUiSmallMargin" direction="Column" renderType="Div">
+          <Label text="Seleccionar Año"/>
+          <ComboBox id="comboPeriodos" items="{path:'periodosModel&gt;/array'}" selectionChange="_onLeePeriodo">
+            <items>
+              <core:Item key="{path:'periodosModel&gt;Anho'}" text="{path:'periodosModel&gt;Anho'}"/>
+            </items>
+          </ComboBox>
+        </FlexBox>
+      <ScrollContainer height="100%" horizontal="true" vertical="true" width="100%">
+        <FlexBox class="sapUiSmallMargin" direction="Column" renderType="Div">
+          <PDFViewer height="{/Height}" id="PDFViewer" source="{/Source}" title="{/Title}">
+            <layoutData>
+              <FlexItemData growFactor="1"/>
+            </layoutData>
+          </PDFViewer>
+        </FlexBox>
+      </ScrollContainer>
+    </Page>
+  </App>
+</mvc:View>

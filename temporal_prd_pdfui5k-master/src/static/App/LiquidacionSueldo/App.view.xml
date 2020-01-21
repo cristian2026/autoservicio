@@ -1,0 +1,24 @@
+<mvc:View controllerName="AutoservicioPHR.App.LiquidacionSueldo.App" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc">
+  <App>
+    <Page showNavButton="true" navButtonText="Back" navButtonPress="onNavBack" title="Liquidación de Sueldo">
+      <core:HTML id="pdfContainer"/>
+      <FlexBox class="sapUiSmallMargin" direction="Column" renderType="Div">
+          <Label text="Periodos de Pago"/>
+          <ComboBox id="comboPeriodos" items="{path:'periodosModel&gt;/d/results'}" selectionChange="_onLeePeriodo">
+            <items>
+              <core:Item key="{path:'periodosModel&gt;Vabrp'}-{path:'periodosModel&gt;Vabrj'}" text="{path:'periodosModel&gt;Vabrp'} - {path:'periodosModel&gt;Vabrj'}"/>
+            </items>
+          </ComboBox>
+        </FlexBox>
+      <ScrollContainer height="100%" horizontal="true" vertical="true" width="100%">
+        <FlexBox class="sapUiSmallMargin" direction="Column" renderType="Div">
+          <PDFViewer height="{/Height}" id="PDFViewer" source="{/Source}" title="{/Title}">
+            <layoutData>
+              <FlexItemData growFactor="1"/>
+            </layoutData>
+          </PDFViewer>
+        </FlexBox>
+      </ScrollContainer>
+    </Page>
+  </App>
+</mvc:View>

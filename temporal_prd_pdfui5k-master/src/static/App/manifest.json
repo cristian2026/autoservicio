@@ -1,0 +1,184 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "AutoservicioPHR.App",
+		"type": "application",
+		"i18n": "",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "Autoservicio",
+		"description": "Autoservicio Kaufmann",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.0"
+		},
+		"ach": "XXX-YYY-ZZZ",
+		"dataSources": {
+			
+		}
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": ["sap_hcb", "sap_bluecrystal"]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": {
+			"viewName": "AutoservicioPHR.App.App",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			
+		},
+		"resources": {
+			
+		},
+		"handleValidation" : true,
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewPath": "AutoservicioPHR.App",
+				"controlId": "app",
+				"viewType": "XML",
+				"transition": "show",
+				"clearAggregation": true,
+				"controlAggregation": "pages",
+				"bypassed": {
+					"target": ["notFound"]
+				}
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "home",
+					"target": "home"
+				},
+				{
+					"pattern": "BoletaPago",
+					"name": "BoletaPago",
+					"target": "BoletaPago"
+				},
+				{
+					"pattern": "LiquidacionSueldo",
+					"name": "LiquidacionSueldo",
+					"target": "LiquidacionSueldo"
+				},
+				{
+					"pattern": "CertSII",
+					"name": "CertSII",
+					"target": "CertSII"
+				},
+				{
+					"pattern": "CertAntiguedad",
+					"name": "CertAntiguedad",
+					"target": "CertAntiguedad"
+				},
+				{
+					"pattern": "CertPrestamos",
+					"name": "CertPrestamos",
+					"target": "CertPrestamos"
+				},
+				{
+					"pattern": "CertPrestamosPeru",
+					"name": "CertPrestamosPeru",
+					"target": "CertPrestamosPeru"
+				},
+				{
+					"pattern": "CertUtilidadesPeru",
+					"name": "CertUtilidadesPeru",
+					"target": "CertUtilidadesPeru"
+				},
+				{
+					"pattern": "CertCTS",
+					"name": "CertCTS",
+					"target": "CertCTS"
+				},
+				{
+					"pattern": "CertQuinta",
+					"name": "CertQuinta",
+					"target": "CertQuinta"
+				}
+			],
+			"targets": {
+				"home": {
+					"viewName": "App",
+					"viewPath": "AutoservicioPHR.App.Home",
+					"viewLevel": 1
+				},
+				"BoletaPago": {
+					"viewName": "App",
+					"viewPath": "AutoservicioPHR.App.BoletaPago",
+					"viewLevel": 2
+				},
+				"LiquidacionSueldo": {
+					"viewName": "App",
+					"viewPath": "AutoservicioPHR.App.LiquidacionSueldo",
+					"viewLevel": 2
+				},
+				"CertSII": {
+					"viewName": "App",
+					"viewPath": "AutoservicioPHR.App.CertSII",
+					"viewLevel": 2
+				},
+				"CertAntiguedad": {
+					"viewName": "App",
+					"viewPath": "AutoservicioPHR.App.CertAntiguedad",
+					"viewLevel": 2
+				},
+				"CertPrestamos": {
+					"viewName": "App",
+					"viewPath": "AutoservicioPHR.App.CertPrestamos",
+					"viewLevel": 2
+				},
+				"CertPrestamosPeru": {
+					"viewName": "App",
+					"viewPath": "AutoservicioPHR.App.CertPrestamosPeru",
+					"viewLevel": 2
+				},
+				"CertUtilidadesPeru": {
+					"viewName": "App",
+					"viewPath": "AutoservicioPHR.App.CertUtilidadesPeru",
+					"viewLevel": 2
+				},
+				"CertCTS": {
+					"viewName": "App",
+					"viewPath": "AutoservicioPHR.App.CertCTS",
+					"viewLevel": 2
+				},
+				"CertQuinta": {
+					"viewName": "App",
+					"viewPath": "AutoservicioPHR.App.CertQuinta",
+					"viewLevel": 2
+				}
+			}
+		}
+	}
+}

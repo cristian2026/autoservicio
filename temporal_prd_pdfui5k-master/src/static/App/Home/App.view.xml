@@ -1,0 +1,14 @@
+<mvc:View controllerName="AutoservicioPHR.App.Home.App" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc">
+    <Page title="Autoservicios Employee Central">
+      <GenericTile frameType="TwoByOne" header="Boleta de Pago" headerImage="sap-icon://money-bills" id="boletaPago" press="onPressBoletaPago" subheader=""/>
+      <GenericTile frameType="TwoByOne" header="Liquidación de Sueldo" headerImage="sap-icon://money-bills" id="liquidacionSueldo" press="onPressLiquidacionSueldo" subheader=""/>
+      <GenericTile frameType="TwoByOne" header="Certificado de Renta" headerImage="sap-icon://money-bills" id="certificadoRentaChile" press="onPressCertSII" subheader=""/>
+      <GenericTile frameType="TwoByOne" header="Certificado de Antiguedad" headerImage="sap-icon://company-view" id="certificadoAntiguedad" press="onPressCertAntiguedad" subheader=""/>
+      <GenericTile frameType="TwoByOne" header="Cartola de Endeudamiento" headerImage="sap-icon://collections-insight" id="certPrestamos" press="onPressCertPrestamos" subheader=""/>
+      <GenericTile frameType="TwoByOne" header="Certificado CTS" headerImage="sap-icon://collections-insight" id="certificadoCTS" press="onPressCertCTS" subheader=""/>
+      <GenericTile frameType="TwoByOne" header="Certificado de Préstamos" headerImage="sap-icon://collections-insight" id="certPrestamosPeru" press="onPressCertPrestamosPerú" subheader=""/>
+      <GenericTile frameType="TwoByOne" header="Certificado de Utilidades" headerImage="sap-icon://collections-insight" id="certUtilidadesPeru" press="onPressCertUtilidadesPerú" subheader=""/>
+      <GenericTile frameType="TwoByOne" header="Certificado Quinta" headerImage="sap-icon://collections-insight" id="certQuintaPeru" press="onPressCertQuintaPeru" subheader=""/>
+    
+    </Page>
+</mvc:View>

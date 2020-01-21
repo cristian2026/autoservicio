@@ -1,0 +1,26 @@
+<mvc:View controllerName="AutoservicioPHR.App.CertAntiguedad.App" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc">
+  <App>
+    <Page showNavButton="true" navButtonText="Back" navButtonPress="onNavBack"  title="Certificado de Antiguedad">
+      <VBox class="sapUiSmallMargin">
+        <Text text="Seleccione Tipo de Certificado" textAlign="Center"/>
+        <RadioButtonGroup class="sapUiMediumMarginBottom" columns="3" width="100%">
+          <buttons>
+            <RadioButton id="RB1-1" select="onCert1" text="Antigüedad con Sueldo Promedio"/>
+            <RadioButton id="RB1-2" select="onCert2" text="Antigüedad con Sueldo"/>
+            <RadioButton id="RB1-3" select="onCert3" text="Antigüedad sin Sueldo"/>
+          </buttons>
+        </RadioButtonGroup>
+      </VBox>
+      <core:HTML id="pdfContainer"/>
+      <ScrollContainer height="100%" horizontal="true" vertical="true" width="100%">
+        <FlexBox class="sapUiSmallMargin" direction="Column" renderType="Div">
+          <PDFViewer height="{/Height}" id="PDFViewer" source="{/Source}" title="{/Title}">
+            <layoutData>
+              <FlexItemData growFactor="1"/>
+            </layoutData>
+          </PDFViewer>
+        </FlexBox>
+      </ScrollContainer>
+    </Page>
+  </App>
+</mvc:View>

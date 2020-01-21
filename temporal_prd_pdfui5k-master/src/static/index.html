@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Autoservicios Kaufmann</title>
+
+	<script
+		id="sap-ui-bootstrap"
+		src="/resources/sap-ui-core.js"
+		displayBlock="true"
+		data-sap-ui-theme="sap_belize"
+		data-sap-ui-libs="sap.m"
+		data-sap-ui-xx-bindingSyntax="complex"
+		data-sap-ui-resourceroots='{"AutoservicioPHR": "./"}'>
+	</script>
+	<script>
+		function appInit() {
+			if (window.cordova) {
+				// cordova specific launch code
+			} else {
+			new sap.m.Page("page", {
+				  title: "Suel2",
+				}).placeAt('content');
+			}
+		} 
+
+		function appReady() {
+			// remove splash screen from DOM
+			// placeAt('content','only') only removes,
+			// but does not destroy elements!
+			$("#ctnr").remove();
+			// launch application
+			appInit();
+		}
+
+		// need to be executed in the onload event to
+		// ensure all libraries are properly loaded
+		window.onload = function () {
+			if (window.cordova) {
+				document.addEventListener("deviceready", appReady, false);
+			} else {
+				// uncomment next line to enable app start
+				//appReady();
+			}
+		}
+	</script>
+
+	<style>
+		@keyframes pulse {
+		  0% {
+		    opacity: 1;
+		  }
+		  100% {
+		    opacity: 0;
+		  }
+		}
+		body {
+		  margin: 0;
+		}
+		#ctnr {
+		  display: flex;
+		  position: absolute;
+		  top: 0;
+		  right: 0;
+		  bottom: 0;
+		  left: 0;
+		  background-color: #fff;
+		}
+		.ldr {
+		  display: flex;
+		  flex-direction: row;
+		  flex-wrap: wrap;
+		  justify-content: space-around;
+		  align-items: center;
+		  margin: auto;
+		  width: 2.5em;
+		  height: 2.5em;
+		}
+		.ldr-blk {
+		  height: 35%;
+		  width: 35%;
+		  animation: pulse 0.75s ease-in infinite alternate;
+		  background-color: #3e6b83;
+		}
+		.an_delay {
+		  animation-delay: 0.75s;
+		}
+	</style>
+	<script>
+		// sap.ui.getCore().attachInit(function () {
+		// 	sap.ui.xmlview({
+		// 	  viewName: "AutoservicioPHR.App"
+		// 	}).placeAt("content");
+		// });
+		sap.ui.getCore().attachInit(function (){
+				sap.ui.require([
+				], function(){
+					new sap.m.Shell({
+						app: new sap.ui.core.ComponentContainer({
+							name: "AutoservicioPHR.App",
+							height: "100%"
+						})
+					}).placeAt("content");
+				});
+			});
+
+	</script>
+</head>
+<body class="sapUiBody" id="content" role="application">
+		<div id="ctnr">
+			<div class="ldr">
+			    <div class="ldr-blk"></div>
+			    <div class="ldr-blk an_delay"></div>
+			    <div class="ldr-blk an_delay"></div>
+			    <div class="ldr-blk"></div>
+			</div>
+		</div>
+</body>
+</html>

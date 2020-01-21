@@ -1,0 +1,42 @@
+{
+  "name": "nodejs-oauth-ec",
+  "version": "1.0.0",
+  "description": "Authentication OAuth SF EC",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "qas": "DOMAIN=http://serviciossffqa.kaufmann.cl:4000/ node app.js",
+    "prd": "DOMAIN=http://serviciossff.kaufmann.cl:4002/ node app.js",
+    "dev": "DOMAIN=http://localhost:4002/ PORT=4002 SFSF_DC=hcm19preview COMPANY_ID=comercialkT1 API_KEY=M2ZlNjE2ZTEyYzA5ZDJmODJlYjZjMzQzMGUyMQ PRIVATE_KEY=MIIEpAIBAAKCAQEAxUsqFOlADe+mcpKzE0oh0jRi0bgpyhoFfv3BzISpF+wiS2fZ36eBq1pGhuV6cwvkysFaucOm9FnDZxo3rQEdd7jDSOFp/pwRe/ldyNfgRd6LOHiYlNikMYWULBFtW9ZtVgSF3J3QWD21b45cat0w9Vdh8G7Bjc1+9oGjZyyiTykPkOKtaCOykuB0iepKRLqenkToMJhdhTf3O00njmdZvpR2KP/EsxTDVJs52Ot+JItw/NYM+dtjjOpFEVr7vTpLE2I1VxTCcSmyBop1m0Gy09SxjlDUPx4hkEZPtXC6MU6RNnVuPkIiSKlhLGKc3zH5LNuL259AB6i94toQ0B4LPQIDAQABAoIBAQCThbyVnkOTKBshmKfmSIw5jYpGnppA0GxDpKMAtkFp7dtG3wR+w9Wltv79ZyHEXKRbJ3EbbjysgWIm+eefqTHLj5AWMtb61uAL/04tG55LIDihpSsSQVuk2+kLeox3G0LuCru9VxOup5W/MIfSMEqnaQuGqIp56aqB0DXKtAk5fn4NQ1UozJR6zDp/SEQS7ezy4AZERA1nU8cADqz22aX6rxlnIDVh2krYdwtK+66+cSwrlWavNGAEShwguorVFptvv4277drLKnNSIBvxfgMt5HFX5Oye0LjwxsW2ct8OhjmF3vJIkD3geAD1fbXtDqdV0hMZfDcaGtuNLrXaGiVRAoGBAOpoqyTfOrUBVAayCR4KQnpPSEUNdJJPuHld4Q7l23clSZblQPT2IY9JEYCcDPSXFB7JcS7ZahVcR7v4MjpPbDa7W6lOtk/+zNe+pMa9ud1sDEwCx0bvpL78Dc7/9bevYHNHPN8vvEwJH2vgAhbpaC384pykkAwxqKcYhPtm/6JPAoGBANd3Uqo4CFQFBH3/ptAZ3FcKW8WdVDj68MdrrNk1mndmN2V4OnOzQX93VPY5LQ5xEYruHV6oCxXEQX28ndxIVJtXnOigbuDQvpz9N4s1Piu6c0pLam9OBnpUh8qCEpqwCp6CM+Xszc/O9gFZAV1i0mah1Cb39M609ACZLCx/KhKzAoGAaczMUlwfF0t+LXd1/gULdEEMkX49OzyYOs9QoXTF1cUSrfTTmLzu8Mk+CRpmDo+SGUM6vraK1xFLn1+q6/6lDR8LhCNuzjRnKIl3vewsU/BMrJIkd7P6W+lQIjoNIdcaZW2l3+afyoHjmMEGsGixCPC3J5RvH9HaGXFLtF0MzKkCgYBOKxvyZSGgWbGnhHggR0GI0lk4+Dr18RQpRQcQRkIjzxGJ3nRWRVIdzE0mhtexxZN3s6s0DAL5gpm/5A3hPNx0/vQN8SZIqXJ9wd/EwSws8ReifHnAp63x83jQHyBgvj0cBGCPqbmBCrR1CLVWC+QJF+y/tnU6CKv9C5TbD8dTwQKBgQDhDuVaPb5I/voRlik/Z6GxGegZeSgLxl0QNivgaGOvLEKzu6fK0Qzpnga2nFoyqbxeKVdMLv+OWWxYWpKDth9Wybpmsu/sVft1PWtDmmLuuaNxKocm/CO9H38Gm9Nhig4TqL+c7y7ey6zounwNoFEuZMXmMZ3SftKuNLWdSOu3CA== GW_USER=acastro  GW_PASSWORD=Phr2018# GW_URL=http://fioriqas.kaufmann.cl:8000/sap/opu/odata/sap/ZHR_BOLETA_PAGO_PDF_SRV_01/ JWT_SECRET=l1jy6boC0EXIDMZr_L5LsZx1IpfdTyZcYpbxcDLUR1Q nodemon app.js",
+    "ocean": "DOMAIN=http://serviciossffqa.kaufmann.cl:4000/ node app.js",
+    "heroku": "DOMAIN=https://be-sso-ec.herokuapp.com/ ENV=prod node app.js",
+    "test": "grunt lint && grunt test"
+  },
+  "author": "Juan-Pablo Barahona",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "fs": "0.0.1-security",
+    "helmet": "^3.13.0",
+    "http": "0.0.0",
+    "jsonwebtoken": "^8.3.0",
+    "openui5.runtime.downloader": "^2.0.6",
+    "passport": "^0.4.0",
+    "passport-saml": "^0.35.0",
+    "querystring": "^0.2.0",
+    "request": "^2.88.0",
+    "serve-favicon": "^2.5.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-connect": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-openui5": "^0.15.0"
+  }
+}
